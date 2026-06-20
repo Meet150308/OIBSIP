@@ -16,6 +16,7 @@ The application allows users to manage daily tasks efficiently by adding, editin
 * Date and time tracking
 * Local Storage support (tasks remain after page refresh)
 * Responsive and user-friendly interface
+(Screenshots are avilable in images folder)
 
 ## Technologies Used
 
