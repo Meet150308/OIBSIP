@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Secure Dashboard</h1>
+
+        <h2 id="welcomeMessage"></h2>
+
+        <h2 id="welcomeMessage"></h2>
+
+        <p>🔐 Authentication Successful</p>
+
+        <p>
+            Welcome to your secure dashboard.
+            Only logged-in users can access this page.
+        </p>
+
+        <p>
+            This is a protected page that can only be accessed after authentication.
+        </p>
+
+        <button onclick="logoutUser()">Logout</button>
+
+    </div>
+
+    <script>
+
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "index.html";
+        }
+
+        const username = localStorage.getItem("username");
+
+        document.getElementById("welcomeMessage").innerText =
+            "Welcome, " + username + "!";
+
+        function logoutUser() {
+
+            localStorage.removeItem("loggedIn");
+
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+</body>
+
+</html>
